@@ -1,0 +1,30 @@
+public class ShapeAreaCalculator {
+
+    // Method to calculate area of a square
+    public static double calculateArea(double side) {
+        return side * side;
+    }
+
+    // Method to calculate area of a rectangle
+    public static double calculateArea(double length, double width) {
+        return length * width;
+    }
+
+    // Method to calculate area of a circle
+    public static double calculateArea(double radius, boolean isCircle) {
+        if (isCircle) {
+            return Math.PI * radius * radius;
+        }
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        double squareArea = calculateArea(5);
+        double rectangleArea = calculateArea(4, 6);
+        double circleArea = calculateArea(3, true);
+
+        System.out.println("Area of square: " + squareArea);
+        System.out.println("Area of rectangle: " + rectangleArea);
+        System.out.println("Area of circle: " + circleArea);
+    }
+}
